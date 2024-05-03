@@ -62,8 +62,10 @@ app.post('/api/descriptions', async (req, res) => {
   }
   const prompt = `voila une description:"${description}"\n` +
       `Est-ce que cette description est éthique ?\n` +
+      `Est-ce que cette description est sexiste ?\n` +
       `Répond selon ce format JSON :\n` +
       `{ "isNotEthical":true/false\n` +
+      ` "isSexist":true/false\n` +
       `   "reasons" : [\n` +
       `      "raison 1",\n` +
       `      "raison 2"]\n` +
